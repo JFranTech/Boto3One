@@ -10,14 +10,4 @@ instances = ec2.create_instances(
      InstanceType='t2.micro',
      KeyName='practiceKey') # Key pair name
 
-# Get instance ID
-#instance_id = instances[0].id 
 
-# Add tags to instance
-ec2.create_tags(Resources=[instance_id], Tags=[{
-     'Key': 'Test',
-     'Value': 'My Instance Test1'
-}])
-
-# Print instance ID
-print(instances)
